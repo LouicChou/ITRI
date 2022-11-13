@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{margin:0;padding:0}
-        img{vertical-align:top;border:none}
+        *{
+            margin:0;
+            padding: 0;
+        }
+        
         li{
             /* 圓點消失 */
             list-style: none;
+        }
+        .line-height-24{
+            line-height: 24px;
+        }
+        a:hover{
+            text-decoration:underline;
         }
         .dis-flex{
             display: flex;
@@ -57,6 +66,20 @@
         .align-items-end{
             align-items: flex-end;
         }
+
+        .underline{
+            /* transparent讓下底線動畫出現時不要整個文字上移 */
+            border-bottom: 4px solid transparent;   
+            /* 讓hover效果變成要跑0.5秒，而不是瞬間出現，除了border也可指定all讓全部類型都延遲0.5秒 */
+            transition: border 0.5s;     
+        }
+        .underline:hover{
+            border-bottom: 4px solid #016364;
+            
+        }
+        .cursor-pointer{
+            cursor:pointer;
+        }
     </style>
 </head>
 <body>
@@ -64,27 +87,29 @@
         <!-- 放到最右邊再用Margin往左推一點 -->
         <div class="dis-flex jsty-con-end margin-x-40">
         <!-- 消除下底線 -->
-        <a href="#" class="pd-x-8 link-no-underline">網站導覽</a>
-        <a href="#" class="pd-x-8 link-no-underline">菁英招募</a>
-        <a href="#" class="pd-x-8 link-no-underline">公告</a>
-        <a href="#" class="pd-x-8 link-no-underline">English</a>
+        <a href="#" class="pd-x-8 link-no-underline line-height-24 cursor-pointer">網站導覽</a>
+        <a href="#" class="pd-x-8 link-no-underline line-height-24 cursor-pointer">菁英招募</a>
+        <a href="#" class="pd-x-8 link-no-underline line-height-24 cursor-pointer">公告</a>
+        <a href="#" class="pd-x-8 link-no-underline line-height-24 cursor-pointer">English</a>
         </div>
         <div class="margin-x-65 dis-flex align-items-end" >
             <h1>
                 <img src="../ITRI/itrilogo.svg">
             </h1>
-            <div>
+            <nav>
                 <!-- <ul class="dis-flex jsty-con-sb width-100"> -->
                 <ul class="dis-flex">
-                    <li class="font-28 margin-x-40">尖端科技</li>
-                    <li class="font-28 margin-x-40">產業服務</li>
-                    <li class="font-28 margin-x-40">國際合作</li>
-                    <li class="font-28 margin-x-40">新聞中心</li>
-                    <li class="font-28 margin-x-40">關於我們</li>
-                    <li class="font-28 margin-x-40">線上展示館</li>
+                    <li class="font-28 margin-x-40 underline cursor-pointer">尖端科技</li>
+                    <li class="font-28 margin-x-40 underline cursor-pointer">產業服務</li>
+                    <li class="font-28 margin-x-40 underline cursor-pointer">國際合作</li>
+                    <li class="font-28 margin-x-40 underline cursor-pointer">新聞中心</li>
+                    <li class="font-28 margin-x-40 underline cursor-pointer">關於我們</li>
+                    <li class="font-28 margin-x-40 underline cursor-pointer">線上展示館</li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+            <div>
+                <img src="../ITRI/Search.jpg">
+            </div>            
         </div>
     </header>
     <main></main>
